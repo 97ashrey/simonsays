@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="./css/style.css">
+   <title>Simon Says</title>
+</head>
+<body>
+   <div class="window">
+      <div class="game-buttons ">
+         <div data-id="0" class="game-btn"></div>
+         <div data-id="1" class="game-btn"></div>
+         <div data-id="2" class="game-btn"></div>
+         <div data-id="3" class="game-btn"></div>
+      </div>
+      <div class="controls">
+         <div class="title">Simon</div>
+         <div class="row row-3">
+            <div class="col col-3">
+               <div class="strict-indicator"></div>
+            </div>
+         </div>
+         <div class="row row-3">
+            <div class="col">
+               <div class="count">
+                  <span>--</span>
+               </div>
+            </div>
+            <div class="col">
+               <div class="c-btn start-btn"></div>
+            </div>
+            <div class="col">
+               <div class="c-btn strict-btn"></div>
+            </div>
+         </div>
+         <div class="row row-3">
+            <div class="col">
+               <lable class="c-label">Count</lable>
+            
+            </div>
+            <div class="col">
+               <lable class="c-label">Start</lable>
+            
+            </div>
+            <div class="col">
+               <lable class="c-label">Strict</lable>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <div class="row row-3">
+                  <div class="col">
+                     <lable class="c-label">OF</lable>
+                  </div>
+                  <div class="col">
+                     <div class="on-of-btn">
+                        <span></span>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <lable class="c-label">ON</lable>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script type="module" src="./js/app.mjs"></script>
+</body>
+</html>

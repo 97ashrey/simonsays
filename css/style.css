@@ -1,0 +1,200 @@
+.window{
+   --window-radius: 300px;
+   --window-bg-color: #444;
+   --b-gap: 15px;
+   height: var(--window-radius);
+   width: var(--window-radius);
+   border-radius: var(--window-radius);
+   background: var(--window-bg-color);
+   margin-left: auto;
+   margin-right: auto;
+   box-sizing: border-box;
+   padding: var(--b-gap);
+   position: relative;
+   user-select: none;
+}
+
+.game-buttons{
+   width: 100%;
+   height: 100%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-gap: var(--b-gap);
+   border-radius: var(--window-radius);
+   overflow: hidden;
+}
+
+.btn-hvr .game-btn:hover{
+   cursor: pointer;
+}
+
+.game-btn[data-id="0"]{
+   background-color: darkgreen;
+}
+
+.game-btn[data-id="1"]{
+   background-color: darkred;
+}
+
+.game-btn[data-id="2"]{
+   background-color: darkgoldenrod;
+}
+
+.game-btn[data-id="3"]{
+   background-color: darkblue;
+}
+
+.controls{
+   --c-radius: 180px;
+   width: var(--c-radius);
+   height: var(--c-radius);
+   border-radius: var(--c-radius);
+   border: 10px solid var(--window-bg-color);
+   background-color: rgb(250, 243, 238);
+   box-sizing: border-box;
+   padding: 20px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.controls .title{
+   font-size: 2em;
+   font-weight: bold;
+}
+
+.row{
+   width: 100%;
+   display: grid;
+}
+
+.row-3{
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col-3{
+   grid-column: 3/4;
+}
+
+.col{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.c-label{
+   text-align: center;
+}
+
+.count{
+   box-sizing: border-box;
+   width: 40px;
+   height: 30px;
+   border: 2px solid var(--window-bg-color);
+   border-radius: 5px;
+   background-color: darkred;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.count span{
+   color: red;
+   opacity: 0.4;
+   font-size: 1.8em;
+}
+
+.flash{
+   animation-name: flash;
+   animation-duration: 0.5s;
+   animation-fill-mode: forwards;
+   animation-iteration-count: 2;
+}
+
+@keyframes flash{
+   0%{
+      opacity: 1;
+   }50%{
+      opacity: 0.4;
+   }100%{
+      opacity: 1;
+   }
+}
+
+.c-btn{
+   --btn-radius: 20px;
+   width: var(--btn-radius);
+   height: var(--btn-radius);
+   border-radius: var(--btn-radius);
+   background: black;
+   border: 3px solid var(--window-bg-color);
+   box-shadow: 0px 1px 1px 1px grey;
+}
+
+.c-btn:active{
+   box-shadow: none;
+   transform: translateY(2px);
+}
+
+.strict-indicator{
+   --str-radius: 8px;
+   width: var(--str-radius);
+   height: var(--str-radius);
+   border-radius: var(--str-radius);
+   background: darkred;
+   border: 2px solid var(--window-bg-color);
+   box-shadow: 0px 1px 1px 1px grey
+}
+
+.start-btn{
+   background: red;
+}
+
+.strict-btn{
+   background: yellow;
+}
+
+.on-of-btn{
+   background: var(--window-bg-color);
+   padding: 3px;
+   width:100%;
+   height: 100%;
+   box-sizing: border-box;
+}
+
+.on-of-btn span{
+   display: block;
+   width: 50%;
+   height: 100%;
+   box-sizing: border-box;
+   background: lightseagreen;
+}
+
+.toggle{
+   transform: translateX(100%);
+}
+
+.c-btn:hover , .on-of-btn:hover{
+   cursor: pointer;
+}
+
+
+@media screen and (min-width: 576px){
+   .window{
+      --window-radius: 450px;
+      margin-top: 100px;
+   }
+
+   .controls{
+      --c-radius: 220px;
+   }
+}
+
+
+
